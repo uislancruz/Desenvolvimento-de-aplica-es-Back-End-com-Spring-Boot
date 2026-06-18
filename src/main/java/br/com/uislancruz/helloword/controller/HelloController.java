@@ -14,19 +14,5 @@ public class HelloController {
         return "Hello World!";
     }
 
-    @GetMapping("/produtos")
-    public Produto getProduto() {
-        Produto produto = new Produto();
-        produto.setId(1);
-        produto.setNome("Notebook");
-        produto.setPreco(1000.00);
-        return produto;
-    }
 
-    @PostMapping("/produtos")
-    public String addNewProduct(@RequestBody Produto produto) {
-        System.out.println("Produto recebido: ");
-        System.out.println(produto.getId() + " - " + produto.getNome() + " - " + produto.getPreco() );
-        return "Produto salvo com sucesso!";
-    }
 }
